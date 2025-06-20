@@ -1,0 +1,26 @@
+<section class="products-intro">
+  <div class="container">
+    <h2 class="section-title">Smart Solutions by Panveyo</h2>
+    <p class="section-subtitle">Explore our upcoming business tools designed to empower your enterprise.</p>
+  </div>
+</section>
+
+<section class="product-listing">
+  <div class="container">
+    <div *ngFor="let product of products; let i = index" class="product-section" [class.alt]="i % 2 !== 0">
+      <div class="product-content">
+        <span class="product-category">Panveyo Products</span>
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <p class="product-status">{{ product.status }}</p>
+        <div class="product-actions">
+          <button class="btn btn-primary" (click)="viewProduct(product.id)">View Details</button>
+          <button class="btn btn-outline" (click)="contact()">Contact Us</button>
+        </div>
+      </div>
+      <div class="product-image">
+        <img [src]="product.id + '.png'" [alt]="product.title" />
+      </div>
+    </div>
+  </div>
+</section>

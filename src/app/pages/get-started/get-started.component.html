@@ -1,0 +1,101 @@
+<section class="get-started-section">
+  <div class="container">
+    <h2>Schedule a Free Demo</h2>
+    <p class="sub-text">Get in touch with our team to clarify your queries</p>
+
+    <form #demoForm="ngForm" (ngSubmit)="onSubmit(demoForm)" novalidate>
+      <!-- Name -->
+      <div class="form-group">
+        <i class="fas fa-user icon"></i>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="formData.name"
+          required
+          minlength="2"
+          pattern="^[A-Za-z ]+$"
+          placeholder="Name*"
+          #name="ngModel"
+        />
+        <div class="error" *ngIf="name.invalid && name.touched">
+          <small *ngIf="name.errors?.['required']">Name is required.</small>
+          <small *ngIf="name.errors?.['minlength']">Minimum 2 characters required.</small>
+          <small *ngIf="name.errors?.['pattern']">Only letters and spaces allowed.</small>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <i class="fas fa-phone icon"></i>
+        <input
+          type="tel"
+          name="phone"
+          [(ngModel)]="formData.phone"
+          required
+          pattern="^[6-9][0-9]{9}$"
+          placeholder="Phone Number*"
+          #phone="ngModel"
+        />
+        <div class="error" *ngIf="phone.invalid && phone.touched">
+          <small *ngIf="phone.errors?.['required']">Phone number is required.</small>
+          <small *ngIf="phone.errors?.['pattern']">Enter a valid 10-digit Indian mobile number.</small>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <i class="fas fa-envelope icon"></i>
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="formData.email"
+          required
+          placeholder="Email*"
+          #email="ngModel"
+        />
+        <div class="error" *ngIf="email.invalid && email.touched">
+          <small *ngIf="email.errors?.['required']">Email is required.</small>
+          <small *ngIf="email.errors?.['email']">Enter a valid email address.</small>
+        </div>
+      </div>
+
+      <!-- City -->
+      <div class="form-group">
+        <i class="fas fa-city icon"></i>
+        <input
+          type="text"
+          name="city"
+          [(ngModel)]="formData.city"
+          required
+          placeholder="City*"
+          #city="ngModel"
+        />
+        <div class="error" *ngIf="city.invalid && city.touched">
+          <small *ngIf="city.errors?.['required']">City is required.</small>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <i class="fas fa-comment icon"></i>
+        <textarea
+        name="message"
+        [(ngModel)]="formData.message"
+        placeholder="Message"
+        rows="4"
+        required
+        #message="ngModel"></textarea>
+
+        <div class="error" *ngIf="message.invalid && message.touched">
+          <small *ngIf="message.errors?.['required']">Please write the message</small>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="demoForm.invalid">Submit</button>
+    </form>
+    <div class="loading-overlay" *ngIf="loading">
+  <div class="spinner"></div>
+  <p>Sending message...</p>
+</div>
+  </div>
+</section>

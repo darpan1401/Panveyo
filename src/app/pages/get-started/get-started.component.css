@@ -1,0 +1,180 @@
+/* GET STARTED SECTION */
+.get-started-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.get-started-section .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.get-started-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #011736;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.get-started-section .sub-text {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* FORM STYLING */
+.get-started-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.get-started-section .form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.get-started-section input,
+.get-started-section textarea {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.8rem; /* left space for icon */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.get-started-section input:focus,
+.get-started-section textarea:focus {
+  outline: none;
+  border-color: #011736;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #011736;
+}
+
+.get-started-section input::placeholder,
+.get-started-section textarea::placeholder {
+  color: #999;
+}
+
+.get-started-section textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ICON STYLING */
+.get-started-section .icon {
+  position: absolute;
+  top: 14px; /* fixed from top instead of 50% */
+  left: 1rem;
+  color: #011736;
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+
+/* ERROR MESSAGES */
+.get-started-section .error {
+  color: #d11a1a;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  padding-left: 0.2rem;
+}
+
+/* SUBMIT BUTTON */
+.get-started-section button {
+  background-color: #d11a1a;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  width: 30%;
+  align-self: center;
+  border-radius: 16px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-section button:hover {
+  background-color: #b21818;
+}
+
+.get-started-section button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 4px solid #ddd;
+  border-top: 4px solid #d11a1a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-overlay p {
+  font-size: 1.1rem;
+  color: #011736;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .get-started-section {
+    padding: 3rem 1rem;
+  }
+
+  .get-started-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .get-started-section .sub-text {
+    font-size: 1rem;
+  }
+
+  .get-started-section input,
+  .get-started-section textarea {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .get-started-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .get-started-section button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}

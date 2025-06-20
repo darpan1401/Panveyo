@@ -1,0 +1,115 @@
+<!-- HERO SECTION -->
+<section class="about-hero">
+  <div class="container">
+    <div class="about-text">
+      <h1>We Are <span>Panveyo</span></h1>
+      <p>We help businesses thrive with cutting-edge tools built to simplify operations, improve revenue, and deliver the best customer experience — especially for restaurants and retailers.</p>
+    </div>
+    <div class="about-image">
+      <img src="team.png" alt="About Panveyo" />
+    </div>
+  </div>
+</section>
+
+<!-- STORY / JOURNEY SECTION -->
+<section class="about-journey">
+  <div class="container">
+    <h2>Our Journey</h2>
+    <p class="journey-intro">From an ambitious startup to a full-suite business platform powering growth across India.</p>
+    <p>
+      When Panveyo first launched, our goal was simple: support businesses with tools they actually need. We soon realized that most local businesses lacked tech to handle their daily operations — no reliable billing, poor stock tracking, and manual work everywhere.
+    </p>
+    <p>
+      So we built a modular platform that fits businesses of all sizes — whether it’s a single café or a multi-chain brand. Over time, we’ve grown into a robust ecosystem trusted by thousands of businesses across the country.
+    </p>
+  </div>
+</section>
+
+<!-- CORE VALUES SECTION -->
+<section class="about-values">
+  <div class="container">
+    <h2>What Drives Us</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <i class="fas fa-lightbulb fa-2x icon-style"></i>
+        <h3>Innovation</h3>
+        <p>We innovate constantly, creating intuitive products that empower modern businesses.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-circle-notch fa-2x icon-style"></i>
+        <h3>Simplicity</h3>
+        <p>Our tools are designed to be user-friendly — no manuals or training needed.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-headset fa-2x icon-style"></i>
+        <h3>Support</h3>
+        <p>We care about every user and provide timely, personal support that solves problems.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-tags fa-2x icon-style"></i>
+        <h3>Transparent Pricing</h3>
+        <p>No hidden costs. Just straightforward, affordable pricing for all our services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="about-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card" *ngFor="let stat of stats">
+        <h2>{{ stat.number }}</h2>
+        <p>{{ stat.label }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER SECTION -->
+<section class="about-founder">
+  <div class="container">
+    <div class="founder-profile">
+      <img [src]="founder.photo" alt="{{ founder.name }}" class="founder-avatar" />
+      <div class="founder-info">
+        <h3 class="founder-name">{{ founder.name }}</h3>
+        <p class="founder-role">{{ founder.role }}</p>
+        <p class="founder-bio">
+          Panveyo is my dream to bring modern tech to kirana stores, cafes, and retail chains across India. We're building tools that solve real problems, not just fancy dashboards.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="about-team">
+  <div class="container">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card" *ngFor="let member of team">
+        <img [src]="member.photo" alt="{{ member.name }}" class="team-avatar" />
+        <h4 class="team-name">{{ member.name }}</h4>
+        <p class="team-role">{{ member.role }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT PHASES SECTION -->
+<section class="about-phases">
+  <div class="container">
+    <h2>Our Product Journey</h2>
+    <div class="phases-grid">
+      <div class="phase-card" *ngFor="let phase of phases">
+        <h3>{{ phase.title }}</h3>
+        <p>{{ phase.description }}</p>
+        <ul>
+          <li *ngFor="let keyword of phase.keywords">
+            <i class="fas fa-check-circle"></i> {{ keyword }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
