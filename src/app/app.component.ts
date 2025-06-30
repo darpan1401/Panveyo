@@ -13,8 +13,6 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'panveyo';
-
   constructor(
     private scrollService: ScrollTopService,
     private titleService: Title,
@@ -27,22 +25,16 @@ export class AppComponent {
     this.titleService.setTitle('Panveyo - Smart Business Software Suite');
 
     this.metaService.addTags([
-      {
-        name: 'description',
-        content: 'Panveyo offers cutting-edge software solutions including POS, CRM, Payroll, and Business Analytics for restaurants and enterprises.'
-      },
-      {
-        name: 'keywords',
-        content: 'Panveyo, POS, CRM, Payroll Software, Business Analytics, SaaS, restaurant software'
-      },
-      {
-        name: 'author',
-        content: 'Panveyo Tech'
-      },
-      {
-        name: 'robots',
-        content: 'index, follow'
-      }
+      { name: 'description', content: 'Panveyo offers cutting-edge POS, CRM, Payroll, and Business Analytics for restaurants and enterprises.' },
+      { name: 'keywords', content: 'Panveyo, POS Software, Restaurant Management, CRM, Payroll, SaaS, India' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'author', content: 'Panveyo Tech' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+      { name: 'og:title', content: 'Panveyo - Smart Business Software Suite' },
+      { name: 'og:description', content: 'Run your restaurant or business smarter with Panveyo’s advanced tools.' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://www.panveyo.com' },
+      { name: 'og:image', content: 'https://www.panveyo.com/assets/og-image.jpg' }
     ]);
   }
 }
